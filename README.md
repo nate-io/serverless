@@ -1,4 +1,8 @@
-# Codingly.io: Base Serverless Framework Template
+# Serverless Framework Example App
+
+Create a simple auction site with the [Serverless framework](https://www.serverless.com/),  deployed to AWS Lambda, DynamoDB, user authentication via [Auth0](https://auth0.com/), etc.
+
+## Codingly.io: Base Serverless Framework Template
 
 https://codingly.io
 
