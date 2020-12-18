@@ -2,6 +2,14 @@
 
 Create a simple auction site with the [Serverless framework](https://www.serverless.com/),  deployed to AWS Lambda, DynamoDB, user authentication via [Auth0](https://auth0.com/), etc.
 
+### Commands
+
+Note ```serverless``` and ```sls``` are synonomous. The serverless framework accomodates many cloud providers but this project (and notes) relate to AWS; check docs if using a separate provider. 
+
+* ```sls deploy``` - deploy the project (once cli is setup). For AWS this will set up the stack via CloudFormation, Lambda, and associated products.
+* ```sls remove``` - removes the project from CloudFormation (which triggers terminating & deleting associated resources created by CloudFormation).
+* ``` sls deploy -f FUNCTION-NAME``` - deploys just the param function name for faster deploys. If the serverless file was changed ```sls deploy``` must be used.
+
 ## Codingly.io: Base Serverless Framework Template
 
 https://codingly.io
