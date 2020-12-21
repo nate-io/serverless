@@ -12,7 +12,7 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: us-east-1
   environment:
-    AUCTIONS_TABLE_NAME: ${self.custom.AuctionsTable.name}
+    AUCTIONS_TABLE_NAME: ${self:custom.AuctionsTable.name}
   iamRoleStatements:
     - ${file(iam/AuctionsTableIAM.yml):AuctionsTableIAM}
 
@@ -28,8 +28,14 @@ functions:
           method: POST
           path: /auction
 
+  getAuctions:
+    handler: src/handlers/getAuctions.handler
+    events:
+      - http:
+          method: GET
+          path: /auctions
 custom:
   AuctionsTable:
-    name: !Ref AuctionsTable 
+    name: !Ref AuctionsTable
     arn: !GetAtt AuctionsTable.Arn
  
