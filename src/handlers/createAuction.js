@@ -40,6 +40,6 @@ async function createAuction(event, context) {
 }
 
 export const handler = middy(createAuction)
-  .use(httpJsonBodyParser())
-  .use(httpEventNormalizer())
-  .use(httpErrorHandler());
+                        .use(httpJsonBodyParser())
+                        .use(httpEventNormalizer())
+                        .use(httpErrorHandler());
