@@ -2,6 +2,22 @@
 
 Create a simple auction site with the [Serverless framework](https://www.serverless.com/), deployed to AWS (CloudFormation, Lambda, DynamoDB, etc), user authentication via [Auth0](https://auth0.com/), etc.
 
+### Project Layout
+```
+.
+|-- auction-service     - main; handles auction related logic
+  |-- iam               - dynamic aws iam declarations for import
+  |-- resources         - dynamic aws resource declaratiosn for import
+  |-- src               
+    |-- handlers        - route handlers
+    |-- lib             - cross-cutting utility functions
+    |-- serverless.yml  - service definition
+|-- auth-service        - auth services for main app using Auth0
+  |-- src               
+    |-- handlers        - route handlers
+    |-- serverless.yml  - service definition
+```
+
 ### Commands
 
 Note ```serverless``` and ```sls``` are synonomous. The serverless framework accomodates many cloud providers but this project (and notes) relate to AWS; check docs if using a separate provider. 
