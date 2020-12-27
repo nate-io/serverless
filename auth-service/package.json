@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "serverless-bundle": "^1.3.3"
+  },
+  "scripts": {
+    "deploy": "sls deploy -v --stage dev"
   }
 }
