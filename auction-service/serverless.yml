@@ -59,6 +59,8 @@ functions:
     #   - schedule: rate(1 minute)
 
 custom:
+  bundle:
+    linting: false
   authorizer: arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:auth-service-${self:provider.stage}-auth
   AuctionsTable:
     name: !Ref AuctionsTable
