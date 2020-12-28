@@ -36,9 +36,7 @@ function updateRecordToClosed(auction) {
 }
 
 /**
- * Notify seller of param auction two cases: 
- *  1. If no bids receieved, send email explaining auction is closed
- *  2. If bid receieved, inform of the sale price
+ * Notify the winning bidder of param auction close out
  * @param {*} auction 
  */
 function sendBidderNotification(auction) {
