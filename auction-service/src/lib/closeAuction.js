@@ -9,6 +9,8 @@ const sqs = new AWS.SQS();
  * 2. notify seller (sold or expired)
  * 3. notify bidder (if a sale was made)
  * @param {obj} auction 
+ * 
+ * Returns resolved promises from submitting messages to queue.
  */
 export async function closeAuction(auction) {
   await updateRecordToClosed(auction);
@@ -18,7 +20,7 @@ export async function closeAuction(auction) {
   return Promise.all([ notifySeller, notifyBidder && notifyBidder ]);
 }
 
-// update the param record to closed status
+// update the param db record to closed status
 function updateRecordToClosed(auction) {
   const params = {
     TableName: process.env.AUCTIONS_TABLE_NAME,
