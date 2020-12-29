@@ -5,10 +5,13 @@ import httpJsonBodyParser from '@middy/http-json-body-parser';
 import httpEventNormalizer from '@middy/http-event-normalizer';
 // cleaner error handling
 import httpErrorHandler from '@middy/http-error-handler';
+// set CORS headers in responses
+import cors from '@middy/http-cors';
 
 export default handler => middy(handler)
   .use([
     httpJsonBodyParser(),
     httpEventNormalizer(),
     httpErrorHandler(),
+    cors(),
   ]);
