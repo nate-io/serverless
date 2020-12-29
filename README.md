@@ -56,4 +56,7 @@ npm install
 
 ### Restoring Project After Development
 
-Once work is complete the associated AWS resources will be terminated. To restore the project simply nav to each service directory and run ``` sls deploy -v```.
+Once work is complete the associated AWS resources will be terminated to include the non-root user built for this project. To restore the project:
+1. create a new non-root user
+   1. update AWS SDK credentials
+2. nav to each service directory and run ```npm i```, ``` sls deploy -v```.
