@@ -2,6 +2,8 @@
 
 Create a simple auction site with the [Serverless framework](https://www.serverless.com/), deployed to AWS (CloudFormation, Lambda, DynamoDB, S3, IAM, etc), user authentication via [Auth0](https://auth0.com/), etc.
 
+![architecture diagram](./architecture-diagram.png)
+
 ### Project Layout
 ```
 .
