@@ -8,6 +8,7 @@ lerna-debug.log*
 
 # env vars
 .env
+**/.env
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
