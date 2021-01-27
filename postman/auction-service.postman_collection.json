@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "3dfaed12-e7e6-4a8f-97b3-45242fd3e7ca",
+		"name": "auction-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Auction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Super nice car\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auctions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auctions",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auctions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auction By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction/{{AUCTIONS_TEST_ID}}",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction",
+						"{{AUCTIONS_TEST_ID}}"
+					]
+				},
+				"description": "Get Auction"
+			},
+			"response": []
+		},
+		{
+			"name": "Place Bid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 101\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction/{{AUCTIONS_TEST_ID}}/bid",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction",
+						"{{AUCTIONS_TEST_ID}}",
+						"bid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Auction Picture",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction/{{AUCTIONS_TEST_ID}}/picture",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction",
+						"{{AUCTIONS_TEST_ID}}",
+						"picture"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

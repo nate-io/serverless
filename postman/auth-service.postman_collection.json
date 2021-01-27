@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "da636b11-2da6-4ffa-822a-ef31a77e0438",
+		"name": "auth-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth Test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://6ujxqvpjrj.execute-api.us-east-1.amazonaws.com/dev/private",
+					"protocol": "https",
+					"host": [
+						"6ujxqvpjrj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"private"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
